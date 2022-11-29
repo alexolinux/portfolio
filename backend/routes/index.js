@@ -1,5 +1,14 @@
+const router = require('express').Router();
+
 //api (backend) ----------------------------------------
-app.get('/portfolio', (req, res) => {
+router.get('/', (req, res) => {
+  res.json({
+    success: false,
+    message: "/api is forbiden."
+  });
+});
+
+router.get('/portfolio', (req, res) => {
   const data = [
     {
     id: 1,
@@ -22,3 +31,5 @@ app.get('/portfolio', (req, res) => {
     data: data
   });
 });
+
+module.exports = router
