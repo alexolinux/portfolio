@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const portfolio = require('./portfolio');
 
 //api (backend) ----------------------------------------
 router.get('/', (req, res) => {
@@ -8,28 +9,7 @@ router.get('/', (req, res) => {
   });
 });
 
-router.get('/portfolio', (req, res) => {
-  const data = [
-    {
-    id: 1,
-    name: 'My First Project',
-    created: '2019-09-10'
-    },
-    {
-      id: 2,
-      name: 'My Second Project',
-      created: '2020-01-22'
-    },
-    {
-      id: 3,
-      name: 'My Third Project',
-      created: '2020-03-11'
-    },
-  ];
-  res.json({
-    success: true,
-    data: data
-  });
-});
+//Redirects ./portfolio to 'portfolio' path (portfolio.js)
+router.use('/portfolio', portfolio);
 
 module.exports = router

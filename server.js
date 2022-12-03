@@ -9,6 +9,7 @@ app.get('/', (req, res) => {
   });
 });
 
+//Redirects ./api requests to 'const api' path (declarated line 3)
 app.use('/api', api)
 
 const PORT = 3080;
