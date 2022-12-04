@@ -1,6 +1,9 @@
 const router = require('express').Router();
 const portfolio = require('./portfolio');
 
+//import mongoConnection (used by mongoose module)
+require('../db/mongoConnection');
+
 //api (backend) ----------------------------------------
 router.get('/', (req, res) => {
   res.json({
