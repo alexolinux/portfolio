@@ -1,6 +1,7 @@
 const { response } = require('express');
 const express = require('express');
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 const api = require("./backend/routes");
 const app = express();
@@ -16,5 +17,5 @@ app.get('/', (req, res) => {
 //Redirects ./api requests to 'const api' path (declarated line 3)
 app.use('/api', api)
 
-const PORT = 3080;
+const PORT = process.env.APP_PORT;
 app.listen(PORT);
