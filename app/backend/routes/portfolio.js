@@ -1,26 +1,11 @@
 const router = require('express').Router();
 
+const Portfolio = require('../models/Portfolio');
+
 router.get('/', (req, res) => {
-  const data = [
-    {
-    id: 1,
-    name: 'My First Project',
-    created: '2019-09-10'
-    },
-    {
-      id: 2,
-      name: 'My Second Project',
-      created: '2020-01-22'
-    },
-    {
-      id: 3,
-      name: 'My Third Project',
-      created: '2020-03-11'
-    },
-  ];
+
   res.json({
-    success: true,
-    data: data
+    success: true
   });
 });
 
@@ -35,7 +20,26 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  res.json(req.body)
+  const portfolio = new Portfolio({
+    title: req.body.title,
+    description: req.body.description,
+  });
+
+  portfolio
+    .save()
+    .then((data) => {
+      res.json({
+        success: true,
+        data
+      })     
+      
+    })
+    .catch((err) => {
+      res.json({
+        success: false,
+        message: err
+      })
+    });
 });
 //-- -----------------------------------------------
 
