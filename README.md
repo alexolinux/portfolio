@@ -10,7 +10,7 @@ It will be done using NODEJS Javascript (MERN):
 * React
 * Node
 
->Note: It is required to set up you MongoDB environment before start node console based on .env.sample:
+>Note: It is required to set up your MongoDB environment before starting the node console based on .env.sample:
 
 *  APP_PORT: **application** port.
 *  MONGO_DATABASE= Mongo database name.
