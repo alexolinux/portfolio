@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
 //Two ways to instantiate:
-//1.
+//1. Commented
 //const Schema = mongoose.Schema;
-//2.
+//2. Follow Block:
 const { Schema } = mongoose;
 
 const portfolioSchema = new Schema({
