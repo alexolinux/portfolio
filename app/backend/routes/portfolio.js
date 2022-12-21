@@ -1,13 +1,22 @@
 const router = require('express').Router();
+const { default: mongoose } = require('mongoose');
 const Portfolio = require('../models/Portfolio');
 
-router.get('/', (req, res) => {
-  const portfolio = Portfolio.find()
+router.get('/', async (req, res) => {
+  try{
+    const portfolio = await Portfolio.find()
   
-  res.json({
-    success: true,
-    data: portfolio
-  });
+    res.json({
+      success: true,
+      data: portfolio
+    });
+  }
+  catch(err){
+    res.json({
+      success: false,
+      message: err
+    })
+  }
 });
 
 router.post('/', async (req, res) => {
@@ -51,14 +60,14 @@ router.post('/', async (req, res) => {
 });
 
 //-- -----------------------------------------------
-router.get('/:id', (req, res) => {
+/* router.get('/:id', (req, res) => {
   console.log("Reported ID: ", req.params.id);
 
   res.json({
     success: true,
     id: req.params.id
   });
-});
+}); */
 //-- -----------------------------------------------
 
 module.exports = router
