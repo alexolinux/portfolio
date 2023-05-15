@@ -22,6 +22,4 @@ It will be done using NODEJS Javascript (MERN):
 ---
 ### Study based on follow playlist:
 
-[Criando o seu próprio Portfolio com Mongo, Express, React e Node](https://www.youtube.com/playlist?list=PL07l7JtVlEwLdblHLQ3NV2huSN9Pjzaaa)
-
-**Author**: Reginaldo Santos
+[Criando o seu próprio Portfolio com Mongo, Express, React e Node (Reginaldo Santos)](https://www.youtube.com/playlist?list=PL07l7JtVlEwLdblHLQ3NV2huSN9Pjzaaa)
