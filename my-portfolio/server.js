@@ -1,6 +1,10 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 
+const api = require('./backend/routes');
 const app = express();
+
+app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
   res.json({
@@ -8,23 +12,9 @@ app.get('/', (req, res) => {
   });
 });
 
-// DB Simulation
-app.get('/portfolio', (req, res) => {
-  // DB Fake
-  const data = [
-    {
-      id: 1,
-      name: 'Fake Project',
-      createdAt: '2023-05-10'
-    },
-  ];
-
-  res.json({
-    sucess: true,
-    data            // Or data: data
-  });
-  
-});
+// Backend routes (./backends/routes.)
+// Redirects to /api
+app.use('/api', api);
 
 const PORT = 3080;
 app.listen(PORT);

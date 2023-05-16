@@ -12,11 +12,17 @@ It will be done using NODEJS Javascript (MERN):
 
 ### NodeJS
 
-#### - Used Commands
+#### - Used/Required Commands
 
 ```nodejs
 npm i express
-npm i nodemon
+npm i body-parser
+npm i -D nodemon
+```
+
+```nodejs
+// "dev" script created in package.json
+npm run dev
 ```
 
 #### - Useful Commands
