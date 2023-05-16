@@ -10,6 +10,44 @@ It will be done using NODEJS Javascript (MERN):
 * React
 * Node
 
+### NodeJS
+
+#### - Used Commands
+
+```nodejs
+npm i express
+npm i nodemon
+```
+
+#### - Useful Commands
+
+```nodejs
+//Install `package.json` dependencies.
+npm install
+
+//Uninstall package
+npm un <package>
+
+//Update package
+npm up <package>
+
+//List globally installed packages
+npm list -g --depth=0
+
+//Uninstall global package
+npm -g uninstall <package>
+
+//List available scripts to run
+npm run
+
+//Update npm
+npm install -g npm@latest
+```
+
+>> **For more npm commands:** 
+https://www.freecodecamp.org/news/npm-cheat-sheet-most-common-commands-and-nvm/
+
+
 >Note: It is required to set up your MongoDB environment before starting the node console based on .env.sample:
 
 *  APP_PORT: **application** port.
